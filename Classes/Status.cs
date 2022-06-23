@@ -26,6 +26,37 @@ namespace Laba3.Classes
         public Status(MainWindow mainWindow)
         {
             this.mainWindow = mainWindow;
+            _hungry = Properties.Settings.Default.hungry;
+            _money = Properties.Settings.Default.money;
+            _mood = Properties.Settings.Default.mood;
+            isPet = Properties.Settings.Default.isPet;
+            if(isPet)
+                mainWindow.Status.Content = "Домашний";
+            isTraining = Properties.Settings.Default.isTraining;
+            if (isPet)
+                mainWindow.Sp.Content = "Женат";
+            isMarried = Properties.Settings.Default.isMarried;
+            if (isPet)
+                mainWindow.Dres.Content = "Дрессирован";
+            salary = Properties.Settings.Default.salary;
+            day = Properties.Settings.Default.day;
+            month = Properties.Settings.Default.month;
+            year = Properties.Settings.Default.year;
+        }
+
+        public void SaveMethod()
+        {
+            Properties.Settings.Default.hungry = _hungry;
+            Properties.Settings.Default.money = _money;
+            Properties.Settings.Default.mood = _mood;
+            Properties.Settings.Default.isPet = isPet;
+            Properties.Settings.Default.isTraining = isTraining;
+            Properties.Settings.Default.isMarried = isMarried;
+            Properties.Settings.Default.salary = salary;
+            Properties.Settings.Default.day = day;
+            Properties.Settings.Default.month = month;
+            Properties.Settings.Default.year = year;
+            Properties.Settings.Default.Save();
         }
 
         public int _hungry

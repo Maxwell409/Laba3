@@ -174,7 +174,7 @@ namespace Laba3
             {
                 MoneyMethod(-7000);
                 FindFemale.IsEnabled = false;
-                Status.Content = "Домашний";
+                Sp.Content = "Женат";
                 status.isMarried = true;
             }
             else
@@ -187,11 +187,16 @@ namespace Laba3
             {
                 MoneyMethod(-30000);
                 Training.IsEnabled = false;
-                Status.Content = "Домашний";
+                Dres.Content = "Дрессирован";
                 status.isTraining = true;
             }
             else
                 MessageBox.Show("Недостаточно денег");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            status.SaveMethod();
         }
     }
 }

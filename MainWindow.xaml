@@ -25,10 +25,10 @@
         <Label Content="Дресировка:" Margin="15,159,682,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="97"/>
         <Label x:Name="MoneyLabel" Content="100" Margin="151,96,518,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="125"/>
         <Label x:Name="Status" Content="Бродячий" Margin="151,108,519,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="124"/>
-        <Label Content="Холост" Margin="151,122,518,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="125"/>
+        <Label x:Name="Sp" Content="Холост" Margin="151,122,518,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="125"/>
         <Label x:Name="MoodLabel" Content="50" Margin="152,134,518,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="124"/>
         <Label x:Name="HungryLabel" Content="50" Margin="151,146,519,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="124"/>
-        <Label Content="Дикий" Margin="151,159,520,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="123"/>
+        <Label x:Name="Dres" Content="Дикий" Margin="151,159,520,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="123"/>
         <Button Content="Работа" HorizontalAlignment="Left" Height="35" Margin="572,10,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click"/>
         <Label Content="Личный статус" Margin="12,67,0,0" Background="{x:Null}" Foreground="Blue" FontSize="14" HorizontalAlignment="Left" Width="140" Height="27" VerticalAlignment="Top"/>
         <Label x:Name="DataLabel" Content="01.01.2000" HorizontalAlignment="Left" Height="35" Margin="91,10,0,0" VerticalAlignment="Top" Width="147" FontSize="20"/>
@@ -39,6 +39,7 @@
         <Button x:Name="FindFemale" Content="Найти самку (7000 рублей)" HorizontalAlignment="Left" Height="35" Margin="572,210,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click5"/>
         <Button x:Name="Training" Content="Дрессироваться (30000 рублей)" HorizontalAlignment="Left" Height="35" Margin="572,250,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click6"/>
         <Image gif:ImageBehavior.AnimatedSource="kursed.gif" HorizontalAlignment="Left" Height="275" Margin="260,10,0,0" VerticalAlignment="Top" Width="307" Source="kursed.gif"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Height="50" Margin="34,245,0,0" VerticalAlignment="Top" Width="166" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
