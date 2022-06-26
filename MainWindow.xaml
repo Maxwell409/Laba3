@@ -11,6 +11,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="gradient-grainy-gradient-texture_79603-1642.jpg"/>
         </Grid.Background>
+        <Button Content="Выход" HorizontalAlignment="Left" Height="51" Margin="34,265,0,0" VerticalAlignment="Top" Width="166" Click="Button_Click_3"/>
+
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="228" Background="White"/>
 
         <Label Content="Дата:" HorizontalAlignment="Left" Height="35" Margin="34,10,0,0" VerticalAlignment="Top" Width="57" FontSize="20"/>
@@ -39,7 +41,25 @@
         <Button x:Name="FindFemale" Content="Найти самку (7000 рублей)" HorizontalAlignment="Left" Height="35" Margin="572,210,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click5"/>
         <Button x:Name="Training" Content="Дрессироваться (30000 рублей)" HorizontalAlignment="Left" Height="35" Margin="572,250,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click6"/>
         <Image gif:ImageBehavior.AnimatedSource="kursed.gif" HorizontalAlignment="Left" Height="275" Margin="260,10,0,0" VerticalAlignment="Top" Width="307" Source="kursed.gif"/>
-        <Button Content="Сохранить" HorizontalAlignment="Left" Height="50" Margin="34,245,0,0" VerticalAlignment="Top" Width="166" Click="Button_Click_1"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Height="50" Margin="34,210,0,0" VerticalAlignment="Top" Width="166" Click="Button_Click_1"/>
+        <Border x:Name="MainPanel" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="326" VerticalAlignment="Top" Width="794">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="91" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFF3D200" Offset="0"/>
+                    <GradientStop Color="#FFE45353" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Button x:Name="newGame" Content="Новая игра" HorizontalAlignment="Left" Margin="170,45,0,0" VerticalAlignment="Top" Width="450" Height="97" Click="Button_Click_2" FontSize="48"/>
+        <Button x:Name="LoadGame" Content="Загрузить" HorizontalAlignment="Left" Margin="170,152,0,0" VerticalAlignment="Top" Width="450" Height="97" Click="LoadGame_Click" FontSize="48"/>
 
     </Grid>
 </Window>

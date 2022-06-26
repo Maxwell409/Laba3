@@ -22,7 +22,7 @@ namespace Laba3
     public partial class MainWindow : Window
     {
         public Classes.Status status;
-        DispatcherTimer timer = new DispatcherTimer();
+        public DispatcherTimer timer = new DispatcherTimer();
 
         public MainWindow()
         {
@@ -40,7 +40,6 @@ namespace Laba3
             status = new Classes.Status(this);
             timer.Tick += new EventHandler(timer_Tick);
             timer.Interval = new TimeSpan(0, 0, 0, 1, 0);
-            timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -197,6 +196,33 @@ namespace Laba3
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             status.SaveMethod();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            status.ClearMethod();
+            status.LoadMethod();
+            newGame.Visibility = Visibility.Hidden;
+            LoadGame.Visibility = Visibility.Hidden;
+            MainPanel.Visibility = Visibility.Hidden;
+            timer.Start();
+        }
+
+        private void LoadGame_Click(object sender, RoutedEventArgs e)
+        {
+            status.LoadMethod();
+            newGame.Visibility = Visibility.Hidden;
+            LoadGame.Visibility = Visibility.Hidden;
+            MainPanel.Visibility = Visibility.Hidden;
+            timer.Start();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            newGame.Visibility = Visibility.Visible;
+            LoadGame.Visibility = Visibility.Visible;
+            MainPanel.Visibility = Visibility.Visible;
         }
     }
 }

@@ -26,11 +26,15 @@ namespace Laba3.Classes
         public Status(MainWindow mainWindow)
         {
             this.mainWindow = mainWindow;
+        }
+
+        public void LoadMethod()
+        {
             _hungry = Properties.Settings.Default.hungry;
             _money = Properties.Settings.Default.money;
             _mood = Properties.Settings.Default.mood;
             isPet = Properties.Settings.Default.isPet;
-            if(isPet)
+            if (isPet)
                 mainWindow.Status.Content = "Домашний";
             isTraining = Properties.Settings.Default.isTraining;
             if (isPet)
@@ -46,6 +50,33 @@ namespace Laba3.Classes
 
         public void SaveMethod()
         {
+            Properties.Settings.Default.hungry = _hungry;
+            Properties.Settings.Default.money = _money;
+            Properties.Settings.Default.mood = _mood;
+            Properties.Settings.Default.isPet = isPet;
+            Properties.Settings.Default.isTraining = isTraining;
+            Properties.Settings.Default.isMarried = isMarried;
+            Properties.Settings.Default.salary = salary;
+            Properties.Settings.Default.day = day;
+            Properties.Settings.Default.month = month;
+            Properties.Settings.Default.year = year;
+            Properties.Settings.Default.Save();
+        }
+
+        public void ClearMethod()
+        {
+            mainWindow.timer.Stop();
+            hungry = 100;
+            mood = 100;
+            money = 100;
+
+            isPet = false;
+            isTraining = false;
+            isMarried = false;
+            salary = 0;
+            day = 1;
+            month = 1;
+            year = 2000;
             Properties.Settings.Default.hungry = _hungry;
             Properties.Settings.Default.money = _money;
             Properties.Settings.Default.mood = _mood;
@@ -75,6 +106,7 @@ namespace Laba3.Classes
                 if(hungry <= 0)
                 {
                     MessageBox.Show("You Died");
+                    ClearMethod();
                     mainWindow.Close();
                 }
             }
@@ -96,6 +128,7 @@ namespace Laba3.Classes
                 if (mood <= 0)
                 {
                     MessageBox.Show("You Died");
+                    ClearMethod();
                     mainWindow.Close();
                 }
             }
