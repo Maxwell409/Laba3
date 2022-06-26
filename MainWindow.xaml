@@ -11,6 +11,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="gradient-grainy-gradient-texture_79603-1642.jpg"/>
         </Grid.Background>
+        <Image gif:ImageBehavior.AnimatedSource="kursed.gif" HorizontalAlignment="Left" Height="275" Margin="260,10,0,0" VerticalAlignment="Top" Width="307" Source="kursed.gif"/>
+        <Button x:Name="WinButton" Content="Стать кошачьим богом (100000 рублей)" HorizontalAlignment="Left" Height="35" Margin="260,273,0,0" VerticalAlignment="Top" Width="276" Click="WinButton_Click"/>
+
         <Button Content="Выход" HorizontalAlignment="Left" Height="51" Margin="34,265,0,0" VerticalAlignment="Top" Width="166" Click="Button_Click_3"/>
 
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="228" Background="White"/>
@@ -40,7 +43,6 @@
         <Button Content="Подработка" HorizontalAlignment="Left" Height="35" Margin="572,50,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click4"/>
         <Button x:Name="FindFemale" Content="Найти самку (7000 рублей)" HorizontalAlignment="Left" Height="35" Margin="572,210,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click5"/>
         <Button x:Name="Training" Content="Дрессироваться (30000 рублей)" HorizontalAlignment="Left" Height="35" Margin="572,250,0,0" VerticalAlignment="Top" Width="194" Click="Button_Click6"/>
-        <Image gif:ImageBehavior.AnimatedSource="kursed.gif" HorizontalAlignment="Left" Height="275" Margin="260,10,0,0" VerticalAlignment="Top" Width="307" Source="kursed.gif"/>
         <Button Content="Сохранить" HorizontalAlignment="Left" Height="50" Margin="34,210,0,0" VerticalAlignment="Top" Width="166" Click="Button_Click_1"/>
         <Border x:Name="MainPanel" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="326" VerticalAlignment="Top" Width="794">
             <Border.Background>

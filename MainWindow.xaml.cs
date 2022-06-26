@@ -224,5 +224,19 @@ namespace Laba3
             LoadGame.Visibility = Visibility.Visible;
             MainPanel.Visibility = Visibility.Visible;
         }
+
+        private void WinButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(status._money >= 100000)
+            {
+                timer.Stop();
+                status._money -= 100000;
+                MessageBox.Show("Победа!");
+                status.ClearMethod();
+                newGame.Visibility = Visibility.Visible;
+                LoadGame.Visibility = Visibility.Visible;
+                MainPanel.Visibility = Visibility.Visible;
+            }
+        }
     }
 }
